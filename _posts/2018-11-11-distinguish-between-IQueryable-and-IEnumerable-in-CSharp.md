@@ -4,7 +4,7 @@ title:  "IQueryable和IEnumerable以及AsEnumerable()和ToList()的区别"
 categories: 
 tags: CSahrp Linq
 author: 小飞
-excerpt: 在C#中使用 Linq to sql 时，经常会不知道怎么使用`IQueryable`和`IEnumerable`这两种类型，也常常搞混`AsEnumerable()`和`ToList()`这两个方法。本文就分析下它们之间的区别是什么，以及分别适用于什么情况。
+excerpt: 在C#中使用 Linq to sql 时，经常会不知道怎么使用 IQueryable和IEnumerable 这两种类型，也常常搞混 AsEnumerable()和ToList() 这两个方法。本文就分析下它们之间的区别是什么，以及分别适用于什么情况。
 ---
 
 * content
@@ -14,22 +14,33 @@ excerpt: 在C#中使用 Linq to sql 时，经常会不知道怎么使用`IQuerya
 
 ##  IQueryable 和 IEnumerable 的区别
 * IQueryable
+
 **延时**执行；扩展方法接受的是Expression(必须要能转成sql，否则报错)
 
 * IEnumerable
+
 **延时**执行；扩展方法接受的是Func(C#语法)
 
 ## AsEnumerable() 和 ToList() 的区别
 * ToList()
-立即执行，加载数据到内存中。
+
+**立即**执行，加载数据到内存中。
 
 * AsEnumerable()
-延迟执行，真正使用时才加载数据。
-对IQueryable对象使用AsEnumerable()后，仍然是延迟执行，不过此时对象本质已经变了。
+
+**延时**执行，真正使用时才加载数据。
+
+对IQueryable对象使用AsEnumerable()后，仍然是延时执行，不过此时对象本质已经变了。
+
 前面已经说了`IEnumerable的扩展方法接受的是Func(C#语法)`，当ie对象(iq转变)真正使用时，会有2个步骤：
-1.它会把**iq对象(转变之前的)**的扩展方法翻译成sql语句，查询出数据加载到内存中，变为ie对象；
-2.此时再把**ie对象(转变之后的)**的扩展方法，使用C#求解，得到最终结果。
-例如：iq对象的Skip、Take方法，会被翻译成sql，在数据库里执行取出最终结果。
+
+1. 它会把**iq对象(转变之前的)**的扩展方法翻译成sql语句，查询出数据加载到内存中，变为ie对象；
+2. 此时再把**ie对象(转变之后的)**的扩展方法，使用C#求解，得到最终结果。
+
+例如：
+
+iq对象的Skip、Take方法，会被翻译成sql，在数据库里执行取出最终结果。
+
 而ie对象的Skip、Take方法，则会**取出全部数据到内存中，在内存中执行Skip、Take**，会耗费大量资源。
 
 
