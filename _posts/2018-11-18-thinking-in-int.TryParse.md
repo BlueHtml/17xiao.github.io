@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "int.TryParse非预期执行引发的思考"
 categories: 编程
@@ -16,7 +16,7 @@ excerpt: 在C#中做类型转换时有时会使用到`TryParse`方法，该方�
 
 代码如下：
 
-```C#
+``` C#
 int id = 1000;
 //Request.QueryString["id"] = null
 int.TryParse( Request.QueryString["id"], out id );
@@ -73,7 +73,7 @@ int.TryParse( Request.QueryString["id"], out id );
 
 下面分享一下在stackoverflow上看到的2种方法
 
-```C#
+``` C#
 //方法1、使用out参数的性质
 int i = int.TryParse(s, out i) ? i : 42;
 
