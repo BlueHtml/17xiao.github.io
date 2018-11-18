@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "IQueryable和IEnumerable以及AsEnumerable()和ToList()的区别"
-categories: 
+categories: 编程
 tags: CSahrp Linq
 author: 小飞
 excerpt: 在C#中使用 Linq to sql 时，经常会不知道怎么使用 IQueryable和IEnumerable 这两种类型，也常常搞混 AsEnumerable()和ToList() 这两个方法。本文就分析下它们之间的区别是什么，以及分别适用于什么情况。

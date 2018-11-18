@@ -8,4 +8,4 @@
 
 ## 博客主题
 
-博客主题基于[Gaohaoyang](https://github.com/Gaohaoyang)制作的jekyll博客主题(地址：https://github.com/Gaohaoyang/gaohaoyang.github.io )，在其基础上做了一些配置和修改。
+博客主题基于[Gaohaoyang](https://github.com/Gaohaoyang)制作的jekyll博客主题(地址：<https://github.com/Gaohaoyang/gaohaoyang.github.io>)，在其基础上做了一些配置和修改。
