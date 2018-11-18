@@ -1,9 +1,10 @@
-﻿﻿---
+﻿---
 layout: post
 title:  "int.TryParse非预期执行引发的思考"
 categories: 编程
 tags: CSahrp CSharp基础
 author: 小飞
+excerpt: 在C#中做类型转换时有时会使用到`TryParse`方法，该方法如果转换失败，`out`参数的值是什么呢？我就在这里犯傻了，特意写文记录下。
 ---
 
 * content
@@ -21,6 +22,7 @@ int id = 1000;
 int.TryParse( Request.QueryString["id"], out id );
 //使用 id 进行其他操作...
 ```
+
 因为`Request.QueryString["id"] = null`，所以我的预期是`id=1000`。可是我错了，实际结果是**id=0**。测试多次都是这样。我感觉要出事了。
 
 事实上我对TryParse一直存在这么个认知（以上面代码举例）：
@@ -96,7 +98,7 @@ v = "234".TryParse() ?? 0
 ## 参考
 
 1. SF：<https://stackoverflow.com/questions/1078512/why-does-integer-tryparse-set-result-to-zero-on-failure?noredirect=1&lq=1>
-2. SF：https://stackoverflow.com/questions/10693231/elegant-tryparse
+2. SF：<https://stackoverflow.com/questions/10693231/elegant-tryparse>
 3. MSDN：[Int32.TryParse Method](https://docs.microsoft.com/zh-cn/dotnet/api/system.int32.tryparse?view=netframework-4.7.2)
 
 
