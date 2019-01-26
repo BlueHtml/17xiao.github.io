@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 晓
+title: 过千帆
 brief-intro: .NET Programmer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bluehtml.github.io" # the base hostname & protocol for your site
+url: "https://blog.guoqianfan.com/" # the base hostname & protocol for your site
 
 # permalink: /:year/:month/:day/:title/
 permalink: /:year:month/:title/
@@ -24,6 +24,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 telegram_username: Xiao_C
+rss_path: /feed.xml
 
 description_footer: 我当码农那些年...
 
