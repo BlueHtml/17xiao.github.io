@@ -1,6 +1,6 @@
 ## 托管在Github的个人博客
 
-博客地址: https://bluehtml.github.io
+博客地址: https://blog.guoqianfan.com/
 
 ## 博客简介
 
