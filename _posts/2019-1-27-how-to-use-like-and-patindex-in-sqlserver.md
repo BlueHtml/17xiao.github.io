@@ -20,7 +20,9 @@ excerpt: 在SQL Server中，能使用通配符的只有2个：LIKE、PATINDEX。
 
 ## 语法
 
-`match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]`
+```
+match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
+```
 
 `[ XX ]`代表是可选的，所以可以没有**转义表达式`ESCAPE escape_character`**。
 
