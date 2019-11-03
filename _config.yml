@@ -9,15 +9,18 @@
 title: 过千帆
 brief-intro: .NET Programmer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.guoqianfan.com/" # the base hostname & protocol for your site
+url: "https://blog.guoqianfan.com" # the base hostname & protocol for your site
 
-# permalink: /:year/:month/:day/:title/
-permalink: /:year:month/:title/
+# Index settings
+index_title: 欢迎来到过千帆的博客！ # 主页的标题
+index_brief-intro: 过尽千帆皆不是，斜晖脉脉水悠悠。 # 主页的简短介绍
+
+permalink: /:year/:month/:day/:title/ # 短链接模式：/:year:month/:title/
 
 # other links
 twitter_username: 
 facebook_username: 
-github_username: BlueHtml
+github_username: #BlueHtml
 email: feifeilu100@gmail.com
 weibo_username: 275500476
 zhihu_username: 
