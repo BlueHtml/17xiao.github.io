@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《伤逝》鲁迅"
-categories: 读书
+categories: 阅读
 tags: 文学
 author: 鲁迅
 ---

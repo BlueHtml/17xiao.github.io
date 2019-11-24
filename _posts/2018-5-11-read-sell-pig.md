@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《卖猪》路遥"
-categories: 读书
+categories: 阅读
 tags: 文学
 author: 路遥
 ---

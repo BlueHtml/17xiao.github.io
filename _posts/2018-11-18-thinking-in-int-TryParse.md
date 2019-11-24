@@ -2,8 +2,8 @@
 layout: post
 title:  "int.TryParse非预期执行引发的思考"
 categories: 编程
-tags: CSahrp CSharp基础
-author: 小飞
+tags: csharp
+author: 过千帆
 excerpt: 在C#中做类型转换时有时会使用到TryParse方法，该方法如果转换失败，out参数的值是什么呢？我就在这里犯傻了，特意写文记录下。
 ---
 

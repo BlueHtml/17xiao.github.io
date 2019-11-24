@@ -15,9 +15,9 @@ type: page
 ## 联系我
 
 * email：feifeilu100@gmail.com
-* [博客园](http://www.cnblogs.com/doThing/ "陆小飞")
-* [简书](https://www.jianshu.com/u/f67e4b95e6b0 "CodeMore")
-* Telegram：[Xiao_C](https://t.me/Xiao_C "Fei Lu")
+* [博客园](http://www.cnblogs.com/doThing/)
+* [简书](https://www.jianshu.com/u/f67e4b95e6b0)
+* Telegram：[Xiao_C](https://t.me/Xiao_C)
 
 ## 关于本站
 

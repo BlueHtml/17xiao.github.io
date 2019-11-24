@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "《良娼》阿成"
-categories: 读书
-tags: 文学
+categories: 阅读
+tags: 小说
 author: 阿成
 ---
 

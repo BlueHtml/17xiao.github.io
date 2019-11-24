@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "SQL Server中LIKE和PATINDEX的用法"
-categories: 编程 数据库
-tags: SQL SQLSERVER SQLSERVER基础 字符转义
-author: 小飞
+categories: 数据库
+tags: mssql
+author: 过千帆
 excerpt: 在SQL Server中，能使用通配符的只有2个：LIKE、PATINDEX。本文记录下LIKE、PATINDEX的用法，以及通配符的使用和转义。
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《要过不好不坏的生活》李娟"
-categories: 读书
+categories: 阅读
 tags: 文学 生活
 author: 李娟
 ---
