@@ -123,7 +123,7 @@ Console.WriteLine("utc：{0}", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
         - 【**默认+优先**】**待转换的字符串**里有时区信息。例如：`2019/11/24 17:40:32 +08:00`
         - 使用`DateTimeStyles`参数来指定时区。`DateTimeStyles`是枚举类型，更多信息自己查看定义，这里不再多说。
 
-`Local`和`Utc`都会把相应的时区传递过去。对于 **`Unspecified`(未指定)**，会被当做**本地时区**来处理（结果已验证，[源码](https://source.dot.net/#System.Private.CoreLib/shared/System/DateTimeOffset.cs,799efb65ff67135d)没看懂）。
+`Local`和`Utc`都会把相应的时区传递过去。对于 **`Unspecified`(未指定)**，会被当做**本地时区**来处理（结果已验证，[源码](https://source.dot.net/#System.Private.CoreLib/DateTimeOffset.cs)没看懂）。
 
 #### 测试代码
 
@@ -181,4 +181,4 @@ Console.WriteLine("parse：{0}", DateTimeOffset.Parse("2019-6-14 15:38:49"));
 
 1. C# DateTime与时间戳转换：<https://www.cnblogs.com/polk6/p/6024892.html>
 2. 如何将Unix时间戳转换为DateTime，反之亦然？：<https://stackoverflow.com/questions/249760/how-can-i-convert-a-unix-timestamp-to-datetime-and-vice-versa>
-3. DateTimeOffset源码：<https://source.dot.net/#System.Private.CoreLib/shared/System/DateTimeOffset.cs>
+3. DateTimeOffset源码：<https://source.dot.net/#System.Private.CoreLib/DateTimeOffset.cs>
