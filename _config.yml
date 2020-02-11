@@ -11,6 +11,16 @@ brief-intro: .NET Programmer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.guoqianfan.com" # the base hostname & protocol for your site
 
+# 默认配置
+defaults:
+  -
+    scope:
+      path: "" # 一个空的字符串代表项目中所有的文件（应用到指定路径的文件）
+      type: "posts"
+    values:
+      layout: "post"
+      author: "过千帆"
+
 # Index settings
 index_title: 欢迎来到过千帆的博客！ # 主页的标题
 index_brief-intro: 过尽千帆皆不是，斜晖脉脉水悠悠。 # 主页的简短介绍
@@ -27,6 +37,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 telegram_username: Xiao_C
+cnblogs_addr: doThing
 rss_path: /feed.xml
 
 description_footer: 我当码农那些年...

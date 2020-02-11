@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "C#中的属性"
 categories: 编程
 tags: csharp
-author: 过千帆
 excerpt: 本文介绍了C#中的属性，以及C#6和C#7中与属性相关的新特性。
 ---
 
