@@ -36,7 +36,7 @@ excerpt: 本文主要介绍下怎么使用PHP空间和天翼云盘搭建私人�
 
 `还原php依赖`很简单，只需要执行官方给出的命令(`composer install`)就行。
 
-可以在本地还原，但是为此安装php环境就很麻烦了。下面主要介绍下使用github action方式：使用github action还原依赖，并把生成后的文件使用FTP上传到php空间。
+可以在本地还原，但是为此安装php环境就很麻烦了。这里介绍下github action方式：使用github action还原依赖，并把生成后的文件使用FTP上传到php空间。
 
 ### 1. fork项目+添加Secrets
 
@@ -50,6 +50,7 @@ fork[TCShare项目](https://github.com/xytoki/TCShare)->`Settings`->`Secrets`，
 创建并编写`php.yml`：` Actions`->`Set up a workflow yourself`或`New workflow`->在`Edit new file`文本输入框中`Ctrl+A`全选，删除掉默认代码，复制粘贴下面的yaml代码->右上角点击`Start commit`->`Commit new file`
 
 yaml代码如下：
+{% raw %}
 ```yml
 name: PHP Composer
 
@@ -71,11 +72,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # - name: Validate composer.json and composer.lock
-    #  run: composer validate
-
     - name: Install dependencies
-      run: composer install #--prefer-dist --no-progress --no-suggest
+      run: composer install
 
     - name: Create ftp-include file
       run: echo "!_app/" > .git-ftp-include
@@ -90,13 +88,8 @@ jobs:
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         git-ftp-args: --remote-root public_html
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
 ```
+{% endraw %}
 
 **要注意下面几点：**
 - **触发条件**。已经把触发条件设为`push`/`pull request`/`issue comment`/`started`，最简单的触发方式是**started(`Star`)**。
@@ -116,20 +109,20 @@ jobs:
 
 `.env`文件配置说明如下：
 ```
-## XS 是前缀
-## | -KEY 是配置种类，可选KEY，APP，SEC
-## | | - -ct是key的ID（类似config.php）
-## | | - | - something是配置名称
-## | | - | - | - - - - value在等号右边
-## XS_KEY_ct_something=value
+# XS 是前缀
+# | -KEY 是配置种类，可选KEY，APP，SEC
+# | | - -ct是key的ID（类似config.php）
+# | | - | - something是配置名称
+# | | - | - | - - - - value在等号右边
+# XS_KEY_ct_something=value
 
     XS_KEY_ct=ctyun   #必填，值为ctyun
     XS_KEY_ct_FD=     #应用文件夹名
     XS_KEY_ct_AK=     #AK
     XS_KEY_ct_SK=     #SK
 
-## 这里APP后面的可以是任意值，一般就123456下去
-## ↓
+# 这里APP后面的可以是任意值，一般就123456下去
+# ↓
     XS_APP_1=/              #挂载路径
     XS_APP_1_NAME=TCShare   #网盘名称
     XS_APP_1_THEME=mdui     #界面主题
@@ -196,4 +189,4 @@ V3版本支持Onedrive 国际版和世纪互联，在配置上稍有不同，本
 
 ## 尾声
 
-点击查看[演示站](https://678900.xyz/)，由于使用的国外PHP空间，速度较慢，请耐心等待加载完成。
+点击查看[演示站](https://678900.xyz/)（使用的国外PHP空间，速度较慢，请耐心等待加载完成）。
