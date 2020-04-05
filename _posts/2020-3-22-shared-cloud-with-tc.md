@@ -38,6 +38,10 @@ excerpt: 本文主要介绍下怎么使用PHP空间和天翼云盘搭建私人�
 
 可以在本地还原，但是为此安装php环境就很麻烦了。这里介绍下github action方式：使用github action还原依赖，并把生成后的文件使用FTP上传到php空间。
 
+### 0. 部署准备
+
+PHP环境推荐7.x，服务器为Apache
+
 ### 1. fork项目+添加Secrets
 
 fork[TCShare项目](https://github.com/xytoki/TCShare)->`Settings`->`Secrets`，添加下面3项：
@@ -109,20 +113,20 @@ jobs:
 
 `.env`文件配置说明如下：
 ```
-# XS 是前缀
-# | -KEY 是配置种类，可选KEY，APP，SEC
-# | | - -ct是key的ID（类似config.php）
-# | | - | - something是配置名称
-# | | - | - | - - - - value在等号右边
-# XS_KEY_ct_something=value
+#   XS 是前缀
+#   | -KEY 是配置种类，可选KEY，APP，SEC
+#   | | - -ct是key的ID（类似config.php）
+#   | | - | - something是配置名称
+#   | | - | - | - - - - value在等号右边
+#   XS_KEY_ct_something=value
 
     XS_KEY_ct=ctyun   #必填，值为ctyun
     XS_KEY_ct_FD=     #应用文件夹名
     XS_KEY_ct_AK=     #AK
     XS_KEY_ct_SK=     #SK
 
-# 这里APP后面的可以是任意值，一般就123456下去
-# ↓
+#   这里APP后面的可以是任意值，一般就123456下去
+#          ↓
     XS_APP_1=/              #挂载路径
     XS_APP_1_NAME=TCShare   #网盘名称
     XS_APP_1_THEME=mdui     #界面主题
