@@ -14,8 +14,8 @@ type: page
 
 ## 联系我
 
-* email：feifeilu100@gmail.com
-* [博客园](https://www.cnblogs.com/{{ site.cnblogs_addr }})（纯技术）
+* email：gg@guoqianfan.com
+* [博客园](https://www.cnblogs.com/{{ site.cnblogs_addr }})
 * [简书](https://www.jianshu.com/u/f67e4b95e6b0)
 * Telegram：[{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }})
 
