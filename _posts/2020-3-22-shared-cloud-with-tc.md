@@ -24,7 +24,7 @@ excerpt: 本文主要介绍下怎么使用PHP空间和天翼云盘搭建私人�
 ## 部署
 
 - 项目地址：[TCShare](https://github.com/xytoki/TCShare)
-- 官方部署指南：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/03/03/tcshare.html)
+- 部署指南：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/03/03/tcshare.html)
 
 官方推荐使用**虚拟主机、宝塔**等，因为需要执行命令来还原php依赖，而PHP空间通常是不支持执行命令的。
 
