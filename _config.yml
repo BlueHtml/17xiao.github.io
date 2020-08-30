@@ -30,7 +30,7 @@ permalink: /:year/:month/:day/:title/ # 短链接模式：/:year:month/:title/
 # other links
 twitter_username: 
 facebook_username: 
-github_username: #BlueHtml
+github_username: BlueHtml
 email: gg@guoqianfan.com
 weibo_username: 275500476
 zhihu_username: 
@@ -47,6 +47,11 @@ description_footer: 我当码农那些年...
 # 两种评论插件，选一个就好了，使用自己的 short_name
 livere_shortname: MTAyMC8zNjY0OC8xMzE4Mw==
 disqus_shortname: #https-17xiao-coding-me
+
+# link 友链
+# 两种方式：1.本地定义；2.远程返回(json)
+# link: {"过千帆":"https://blog.guoqianfan.com","过千帆":"https://blog.guoqianfan.com"}
+link: https://mock-api.com/rnNWayKl.mock/link
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即

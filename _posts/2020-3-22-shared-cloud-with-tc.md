@@ -2,12 +2,14 @@
 layout: post
 title:  "使用PHP空间和天翼云盘搭建私人云盘"
 categories: 技术
-tags: 云盘 PHP
+tags: 云盘 php
 excerpt: 本文主要介绍下怎么使用PHP空间和天翼云盘搭建私人云盘。
 ---
 
 * content
 {:toc}
+
+> 天翼云盘的Key已失效，作者也删库了，默哀。。。
 
 ## 前言
 
@@ -24,7 +26,7 @@ excerpt: 本文主要介绍下怎么使用PHP空间和天翼云盘搭建私人�
 ## 部署
 
 - 项目地址：[TCShare](https://github.com/xytoki/TCShare)
-- 部署指南：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/03/03/tcshare.html)
+- 部署指南：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/04/19/tcshare.html)
 
 官方推荐使用**虚拟主机、宝塔**等，因为需要执行命令来还原php依赖，而PHP空间通常是不支持执行命令的。
 
@@ -62,7 +64,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    types: [closed]
   issue_comment:
     types: [created, edited, deleted]
   watch:
@@ -146,7 +148,7 @@ jobs:
 - 网盘内路径：天翼云盘的应用文件夹名下的路径，默认是`/`(应用文件夹)
 - 对应上面Key的ID：默认是`ct`(ct是key的ID)
 
-如果需要多盘挂载，可以在上述配置之后继续追加，但是要修改`key的ID`，相关配置也要修改。示例参考：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/03/03/tcshare.html)
+如果需要多盘挂载，可以在上述配置之后继续追加，但是要修改`key的ID`，相关配置也要修改。示例参考：[TCShare：云盘目录列表，支持天翼云](https://xylog.cn/2020/04/19/tcshare.html)
 
 `.env`配置文件编辑好后，需要**上传到网站根目录下**。
 
@@ -191,6 +193,19 @@ V3版本支持Onedrive 国际版和世纪互联，在配置上稍有不同，本
 - 删除掉项目->重新fork->重新部署（本人常用）
 - 把官方项目Pull requests到个人的fork项目上（未测试）
 
+## 更多功能
+
+### 展示markdown文件内容
+
+- 支持展示`header.md`、`head.md`、`readme.md`文件，会被展示在*文件路径*(顶)和*文件列表*(底)之间。
+- md文件展示后会被**隐藏**。
+
+### WebDav服务器
+
+支持作为WebDav服务器，可以挂载到本地（目前仅为只读）。不过都用了云盘，WebDav服务器就没啥必要了吧。。
+
 ## 尾声
 
-点击查看[演示站](https://678900.xyz/)（使用的国外PHP空间，速度较慢，请耐心等待加载完成）。
+演示站见下（使用的国外PHP空间，速度较慢，请耐心等待加载完成）:
+- [天翼云](https://678900.xyz/)
+- [和彩云](https://678900.xyz/caiyun)

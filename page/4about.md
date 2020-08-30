@@ -17,7 +17,7 @@ type: page
 * email：{{ site.email }}
 * [博客园](https://www.cnblogs.com/{{ site.cnblogs_addr }})
 * [简书](https://www.jianshu.com/u/f67e4b95e6b0)
-* Telegram：[{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }})
+* [Telegram](https://t.me/{{ site.telegram_username }})
 
 ## 关于本站
 
@@ -26,6 +26,7 @@ type: page
 ## 友情链接
 
 暂无
+{% include link.html %}
 
 ## Comments
 
