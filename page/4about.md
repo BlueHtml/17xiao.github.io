@@ -25,7 +25,6 @@ type: page
 
 ## 友情链接
 
-暂无
 {% include link.html %}
 
 ## Comments

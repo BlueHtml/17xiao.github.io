@@ -1,35 +1,38 @@
+<p>暂无</p>
 {% if site.link %}
 <script>
-    const linkConf = '{{ site.link | replace: "'", '"' }}';
-    let linkObj;
-    try {
-        linkObj = JSON.parse(linkConf);
-    } catch (ex) {
-        console.log('link不是json! ' + linkConf);
-    }
-
-    if (!linkObj) {
+    (function () {
+        const linkConf = '{{ site.link | replace: "'", '"' }}';
+        let linkObj;
         try {
-            linkObj = await fetch(new Request(linkConf)).then(response => response.json());
+            linkObj = JSON.parse(linkConf);
         } catch (ex) {
-            console.log('获取友链时出错! ' + ex);
+            console.log('link不是json! ' + linkConf);
         }
-    }
 
-    if (linkObj) {
-        let p = document.querySelector('#友情链接 + p'), isFirst = true;
-        p.firstChild.remove();
-        for (let key in linkObj) {
-            const a = document.createElement('a');
-            a.textContent = key;
-            a.href = linkObj[key];
-            a.target = '_blank';
-            if (!isFirst) {
-                p.append(' | ');
+        if (!linkObj) {
+            try {
+                linkObj = await fetch(new Request(linkConf)).then(response => response.json());
+            } catch (ex) {
+                console.log('获取友链时出错! ' + ex);
             }
-            p.appendChild(a);
-            isFirst = false;
         }
-    }
+
+        if (linkObj) {
+            let p = document.querySelector('#友情链接 + p'), isFirst = true;
+            p.firstChild.remove();
+            for (let key in linkObj) {
+                const a = document.createElement('a');
+                a.textContent = key;
+                a.href = linkObj[key];
+                a.target = '_blank';
+                if (!isFirst) {
+                    p.append(' | ');
+                }
+                p.appendChild(a);
+                isFirst = false;
+            }
+        }
+    })();
 </script>
 {% endif %}
