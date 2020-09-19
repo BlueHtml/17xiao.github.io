@@ -20,7 +20,7 @@ excerpt: 本文主要介绍下如何使用Github Actions来完成有道云笔记
 ## 一、Fork 仓库
 
 打开<https://github.com/BlueHtml/Note163Checkin>，**点击右上角的`Fork`**
-![Fork](https://img.guoqianfan.com/note/2020/08/Fork.png)
+![Fork](https://img.guoqianfan.com/note/2020/08/fork.png)
 
 ## 二、添加 Secret
 
@@ -42,26 +42,22 @@ excerpt: 本文主要介绍下如何使用Github Actions来完成有道云笔记
     ```
 
 **步骤图示如下：**
-![添加Secret](https://img.guoqianfan.com/note/2020/08/添加Secret.png)
+![添加Secret](https://img.guoqianfan.com/note/2020/08/添加secret.png)
 
 ## 三、启用 Action
 
 **点击`Actions`，再点击`I understand my workflows, go ahead and enable them`**
+![启用Action](https://img.guoqianfan.com/note/2020/08/启用action.png)
 
-注意：Fork 的仓库上的 GitHub Actions 的**定时任务不会自动执行**，必须要手动触发一次后才能正常工作。
+**注意**：Fork 的仓库上的 GitHub Actions 的**定时任务不会自动执行**，必须要手动触发一次后才能正常工作。
 
 所以 Fork 之后，点击自己仓库右上角的`Star`，`Star`你的仓库，这是为了触发 Github Action 第一次执行，之后就会自动执行定时任务。
-
-**步骤图示如下：**
-![启用Action](https://img.guoqianfan.com/note/2020/08/启用Action.png)
-
-![Star](https://img.guoqianfan.com/note/2020/08/Star.png)
+![Star](https://img.guoqianfan.com/note/2020/08/star.png)
 
 ## 四、查看运行结果
 
 **`Actions`->`Checkin`->`build`**，能看到下图，表示运行成功（注意：由于 .NET Core会输出默认日志，请**滚动到最下面查看实际运行结果**）
-
-![查看Action运行记录](https://img.guoqianfan.com/note/2020/08/查看Action运行记录.png)
+![查看Action运行记录](https://img.guoqianfan.com/note/2020/08/查看action运行记录.png)
 
 ## 注意事项
 
@@ -70,8 +66,7 @@ excerpt: 本文主要介绍下如何使用Github Actions来完成有道云笔记
 每天运行一次，在上午9:00-9:45之间。
 
 也可以点击右上角的`Star`手动运行。
-
-![Star](https://img.guoqianfan.com/note/2020/08/Star.png)
+![Star](https://img.guoqianfan.com/note/2020/08/star.png)
 
 ## 参考
 

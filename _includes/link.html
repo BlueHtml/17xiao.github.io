@@ -1,7 +1,7 @@
 <p>暂无</p>
 {% if site.link %}
 <script>
-    (function () {
+    (async function () {
         const linkConf = '{{ site.link | replace: "'", '"' }}';
         let linkObj;
         try {
@@ -12,6 +12,7 @@
 
         if (!linkObj) {
             try {
+                console.log('尝试链接获取...');
                 linkObj = await fetch(new Request(linkConf)).then(response => response.json());
             } catch (ex) {
                 console.log('获取友链时出错! ' + ex);
